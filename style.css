@@ -1,0 +1,32 @@
+.stock-chart {
+	position: relative;
+	top: 200px;
+	left: 200px;
+}
+.layers{
+	position: relative;
+	max-width: 80%;
+	max-height: 500px;
+}
+.layers img{
+	position:absolute;
+	max-width: 100%;
+}
+
+.layers img.grid {
+	filter: opacity(40%);
+	transform: translateY(-200px);
+}
+
+.layers img.candle-stick {
+transform: scale(.5);
+left: -200px;
+}
+.layers:hover img.grid {
+	transition: ease 1s ;
+	transform: translateY(-200px) perspective(800px) rotateX(25deg) rotateY(20deg);
+}
+.layers:hover img.candle-stick {
+transition: ease 1s ;
+	transform: perspective(800px) scale(120%);
+}
