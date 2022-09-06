@@ -6,68 +6,75 @@ body {
   display: flex;
   /* top: 200px; */
   /* left: 200px; */
-  width: 90%;
-  height: 90%;
   margin: auto;
-  background-color: purple;
+  width: 80%;
+  height: 600px;
+  /* margin: auto; */
+  left:100px;
+  /* background-color: purple; */
 }
 .layers {
   position: relative;
   width: 100%;
   height: 500px;
   /* width: auto; */
-  background-color: green;
+  /* background-color: green; */
   margin: auto;
+  
 }
 
 .layers img {
   position: absolute;
   /* max-width: 1500px; */
-  width: 50%;
+  width: auto;
 }
 
 .layers img.grid {
-  filter: opacity(90%);
-  width: 110%;
-
-  /* max-width: 100%; */
-  /* background-color: rgb(142, 142, 142); */
-  transform: perspective(800px) rotateY(30deg);
+  filter: opacity(30%);
+  width: 100%;
+/* 
+  transform: perspective(1000px) rotateY(00deg); */
 }
 
-.layers:hover img.grid {
-  transition: ease 1s;
-  /* transform: perspective(800px) rotateY(20deg); */
-}
-
-.layers:hover img.candle-stick {
-  /* position: absolute; */
-  /* transition: ease 1s; */
-  /* transform: perspective(800px) rotateY(10deg); */
-
-  /* left: -10em; */
-  /* top: 300px; */
-
-  /* transform-origin: left; */
-}
-
-.layers img.candle-stick {
-}
-
-.candlstick-wrapper {
+.grid-wrapper {
+  /* display: flex;
+  justify-content: left; */
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 255, 255);
-
-  /* max-width: 100%; */
-  top: 200px;
-  transform: perspective(800px) rotateY(30deg);
+  transform: perspective(800px) rotateY(40deg);
   transform-origin: left;
+}
+
+
+.layers:hover img.grid {
+  /* transition: ease 1s; */
+  /* transform: perspective(800px) rotateY(20deg); */
+}
+
+
+.layers img.candle-stick {
+  top: 100px;
+  width: 100%;
+
+}
+
+.candlstick-wrapper {
+
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  
+  /* background-color: rgba(255, 255, 255, 0.61); */
+  transform: perspective(800px) rotateY(40deg);
+  transform-origin: left;
+  left:5px;
+  /* top:100px; */
 }
 
 body:hover .candlstick-wrapper {
   transform: perspective(800px) rotateY(10deg);
+  transition: ease 1s;
 }
 
 /* DELETE */
